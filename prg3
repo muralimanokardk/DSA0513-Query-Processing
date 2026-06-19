@@ -1,0 +1,10 @@
+import pandas as pd
+
+data = {
+    "JOB_ID":["AD_PRES","FI_MGR","IT_PROG","SA_MAN"],
+    "JOB_TITLE":["President","Finance Manager","Programmer","Sales Manager"]
+}
+
+df = pd.DataFrame(data)
+
+print(df.sort_values(by="JOB_TITLE", ascending=False))
