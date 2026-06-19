@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Date":["2020-04-01","2020-04-02","2020-04-03"],
+    "Volume":[2343100,3964900,2319400]
+}
+
+df = pd.DataFrame(data)
+
+plt.bar(df["Date"], df["Volume"])
+plt.title("Alphabet Trading Volume")
+plt.xlabel("Date")
+plt.ylabel("Volume")
+plt.show()
