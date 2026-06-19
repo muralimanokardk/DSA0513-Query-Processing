@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Date":["2020-04-01","2020-04-02","2020-04-03"],
+    "Close":[1105.62,1120.84,1097.88]
+}
+
+df = pd.DataFrame(data)
+
+plt.plot(df["Date"], df["Close"])
+plt.title("Alphabet Stock Prices")
+plt.xlabel("Date")
+plt.ylabel("Close Price")
+plt.show()
