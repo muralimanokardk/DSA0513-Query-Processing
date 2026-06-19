@@ -1,0 +1,19 @@
+import pandas as pd
+
+data = {
+    "Region":["East","Central","East","West"],
+    "Manager":["Martha","Hermann","Martha","Douglas"],
+    "SalesMan":["Alexander","Luis","Diana","Michael"],
+    "Sale_amt":[113810,43128,14500,38336]
+}
+
+df = pd.DataFrame(data)
+
+pivot = pd.pivot_table(
+    df,
+    values="Sale_amt",
+    index=["Region","Manager","SalesMan"],
+    aggfunc="sum"
+)
+
+print(pivot)
